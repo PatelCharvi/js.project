@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fashify - Seasonal Collections</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#fff;color:#111;scroll-behavior:smooth;}
+
+/* LOGIN PAGE */
+#loginPage{
+  position:fixed;top:0;left:0;width:100%;height:100vh;
+  background:#ffe5ef;display:flex;justify-content:center;
+  align-items:center;z-index:9999;
+}
+.login-box{
+  width:350px;background:white;padding:30px;border-radius:15px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.15);text-align:center;
+}
+.login-box h2{
+  color:#ff136f;font-size:30px;margin-bottom:25px;
+}
+.input{
+  width:100%;padding:12px;margin:10px 0;border-radius:8px;
+  border:1px solid #ccc;font-size:16px;
+}
+.login-btn{
+  width:100%;padding:12px;background:#ff136f;color:white;
+  border:none;border-radius:8px;font-size:18px;cursor:pointer;
+  margin-top:10px;transition:0.3s;
+}
+.login-btn:hover{background:#111;}
+
+/* HEADER */
+header{
+  position:fixed;top:0;width:100%;display:flex;justify-content:space-between;
+  align-items:center;padding:20px 70px;background:white;
+  box-shadow:0 3px 12px rgba(0,0,0,0.1);z-index:100;
+}
+.logo{font-size:30px;font-weight:700;color:#ff136f;}
+.nav a{
+  text-decoration:none;padding:10px 18px;color:#111;
+  font-size:18px;border-radius:20px;
+}
+.nav a:hover{background:#ff136f;color:white;}
+.nav a.active{background:#ff136f;color:white;}
+
+/* HERO */
+.hero{
+  height:90vh;display:flex;align-items:center;justify-content:space-between;
+  background:#ffe5ef;padding:120px 70px;
+}
+.hero-content{max-width:600px;}
+.hero-content h1{
+  color:#ff136f;font-size:60px;font-weight:700;margin-bottom:20px;
+}
+.hero-content p{font-size:20px;color:#333;margin-bottom:30px;}
+.btn{
+  background:#ff136f;color:#fff;padding:14px 36px;border:none;
+  border-radius:10px;font-size:18px;cursor:pointer;transition:0.3s;
+}
+.btn:hover{background:#111;}
+.hero img{
+  width:400px;border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* SEASONS */
+.season-header{
+  text-align:center;background:#ffe5ef;color:#ff136f;
+  padding:60px 0 20px;font-size:38px;font-weight:700;
+  margin-top:80px;border-top:4px solid #ff136f;
+}
+
+/* PRODUCTS */
+.products-container{
+  width:90%;margin:30px auto 70px;display:flex;flex-wrap:wrap;
+  justify-content:center;gap:40px;
+}
+.product-card{
+  width:260px;padding:15px;border-radius:15px;background:#fff;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);text-align:center;
+  transition:all 0.3s ease;cursor:pointer;
+}
+.product-card:hover{
+  box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+.product-card img{
+  width:100%;height:220px;object-fit:cover;border-radius:10px;
+  margin-bottom:12px;transition:transform 0.3s ease;
+}
+.product-card h3{color:#b33b72;font-size:20px;font-weight:700;margin-bottom:4px;}
+.product-card p{font-size:15px;font-weight:200;color:#010203;margin:4px 0;}
+.product-card .price{font-size:17px;font-weight:900;color:#060000;margin-top:6px;}
+
+/* CONTACT */
+#contact{
+  background:#ffe5ef;padding:50px;text-align:center;margin-top:80px;
+}
+#contact h2{color:#ff136f;}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="loginPage">
+  <div class="login-box">
+    <h2>Fashify Login</h2>
+    <input type="text" id="email" class="input" placeholder="Enter Email">
+    <input type="password" id="password" class="input" placeholder="Enter Password">
+    <button class="login-btn" onclick="login()">Login</button>
+  </div>
+</div>
+
+<header>
+  <div class="logo">FASHIFY</div>
+  <div class="nav">
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>New Fashion Collection</h1>
+    <p>Trendy outfits that keep you stylish.</p>
+    <a href="#shop"><button class="btn">Shop Now</button></a>
+  </div>
+  <img src="https://thumbs.dreamstime.com/b/modern-clothing-boutique-exterior-front-view-shopping-mall-glass-facade-apparel-collection-interior-lights-fashionable-wear-retail-385300014.jpg">
+</section>
+
+<!-- SHOP -->
+<div id="shop">
+
+  <!-- SUMMER -->
+  <section id="summer">
+    <div class="season-header">☀ Summer Collection</div>
+    <div class="products-container">
+      <div class="product-card"><img src="https://www.jiomart.com/images/product/original/rvv5ii0gsw/sidyal-two-piece-dress-for-women-beach-dress-for-women-western-dresses-multicolor-xl-product-images-rvv5ii0gsw-0-202406131847.jpg?im=Resize=(500,630)"><h3>Beach Dress</h3><p>Light & Breezy</p><div class="price">₹499</div></div>
+      <div class="product-card"><img src="https://www.odhanon.in/cdn/shop/files/F21A6061_638e9c76-e9d5-4920-8833-1e029653645f.jpg?v=1755786623&width=1946"><h3>Floral Tops</h3><p>Summer Vibes</p><div class="price">₹299</div></div>
+      <div class="product-card"><img src="https://m.media-amazon.com/images/I/715oct59weL.AC_UY1100.jpg"><h3>Denim Shirts</h3><p>Cool Comfort</p><div class="price">₹699</div></div>
+      <div class="product-card"><img src="https://www.gosupps.com/media/catalog/product/cache/25/small_image/1500x1650/9df78eab33525d08d6e5fb8d27136e95/7/1/71fy2wugNUL.jpg"><h3>Sun Hat</h3><p>Vacation Look</p><div class="price">₹499</div></div>
+      <div class="product-card"><img src="https://m.media-amazon.com/images/I/713BH6KAreL.AC_UY350.jpg"><h3>Sunglasses</h3><p>Chic & Stylish</p><div class="price">₹79</div></div>
+      <div class="product-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsNUC2KK4Bt89p3loHJvR04QTXM_6Ry_qLCm5ReClc9fgYha9Jb9bnPFwn5uz-abvsvjY"><h3>Maxi Dress</h3><p>Elegant Flows</p><div class="price">₹1299</div></div>
+    </div>
+  </section>
+
+  <!-- WINTER -->
+  <section id="winter">
+    <div class="season-header">❄ Winter Collection</div>
+    <div class="products-container">
+      <div class="product-card"><img src="https://i.pinimg.com/564x/1e/a4/dc/1ea4dc16fb12acf54c57d2f3ef85e24c.jpg"><h3>Wool Jacket</h3><p>Warm & Cozy</p><div class="price">₹899</div></div>
+      <div class="product-card"><img src="https://m.media-amazon.com/images/I/51OlWV+s62L.AC_UY1100.jpg"><h3>Woolen cap</h3><p>Classic Style</p><div class="price">₹299</div></div>
+      <div class="product-card"><img src="https://m.media-amazon.com/images/I/51zjHOJg+0L.AC_UY1100.jpg"><h3>Ear muffs</h3><p>Soft Knit</p><div class="price">₹99</div></div>
+      <div class="product-card"><img src="https://www.jiomart.com/images/product/original/rv3xlag0lv/cotton-amazing-women-stylish-fur-hoodie-jacket-for-women-winter-wear-jacket-winter-wear-sweatshirt-fur-jacket-hoodie-for-women-s-grey-m-product-images-rv3xlag0lv-0-202309262338.jpg?im=Resize=(500,630)"><h3>Hoodie</h3><p>Everyday Comfort</p><div class="price">₹999</div></div>
+      <div class="product-card"><img src="https://images-cdn.ubuy.co.in/67161dbd216f3338fa368369-bankeng-women-winter-wool-blend-camel.jpg"><h3>Scarf</h3><p>Wool Blend</p><div class="price">₹999</div></div>
+      <div class="product-card"><img src="https://www.alamodelabel.in/cdn/shop/files/WhatsAppImage2023-10-26at1.30.26PM_1024x.jpg?v=1749207609"><h3>Wollen set</h3><p>Luxury Warmth</p><div class="price">₹2999</div></div>
+    </div>
+  </section>
+
+  <!-- MARRIAGE -->
+  <section id="marriage">
+    <div class="season-header">💍 Marriage Season Collection</div>
+    <div class="products-container">
+      <div class="product-card"><img src="https://banudesigns.com/cdn/shop/files/rsz_untitled_design_13_1.png?v=1701420651.jpg"><h3>Lehenga</h3><p>Designer Bridal</p><div class="price">₹5999</div></div>
+      <div class="product-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBvoL_XAE9DzjDneB97I5P-SdFYA-wxuQwYA&s"><h3>Kurta Set</h3><p>Elegant Fabric</p><div class="price">₹2499</div></div>
+      <div class="product-card"><img src="https://theaamara.com/cdn/shop/files/374B148D-417F-44CC-AD23-2A8C0D09FE1B.jpg?v=1730270841&width=1946"><h3>Jewellery</h3><p>Traditional Charm</p><div class="price">₹1999</div></div>
+      <div class="product-card"><img src="https://m.media-amazon.com/images/I/61wngEIdaDL.AC_UY1000.jpg"><h3>Clutch Bag</h3><p>Golden Shine</p><div class="price">₹799</div></div>
+      <div class="product-card"><img src="https://www.fizzygoblet.com/cdn/shop/files/24K_Magic_domestic_cover_11zon.jpg?v=1758263191&width=600"><h3>Heels</h3><p>Shiny</p><div class="price">₹799</div></div>
+    </div>
+  </section>
+
+</div>
+
+<!-- SPRING -->
+<section id="spring">
+  <div class="season-header">🌸 Spring Collection</div>
+  <div class="products-container">
+    <div class="product-card"><img src="https://hashboosh.com/cdn/shop/files/8-2024-02-03T075305.531.jpg?v=1706927256&width=1024"><h3>Floral Dress</h3><p>Soft Pastel</p><div class="price">₹1199</div></div>
+    <div class="product-card"><img src="https://m.media-amazon.com/images/I/61q-eH9RRsL.AC_UY1100.jpg"><h3>Light Cardigan</h3><p>Everyday Wear</p><div class="price">₹899</div></div>
+    <div class="product-card"><img src="https://assets.myntassets.com/w_412,q_30,dpr_3,fl_progressive,f_webp/assets/images/23871424/2023/7/13/7b7e6932-8379-4bb7-88da-926d64f34f641689243790802-Silk-Land-Women-Scarves-1671689243790491-1.jpg"><h3>Printed Scarf</h3><p>Colorful Touch</p><div class="price">₹499</div></div>
+    <div class="product-card"><img src="https://m.media-amazon.com/images/I/81MaozknUhL.AC_UY1100.jpg"><h3>Midi Skirt</h3><p>Fresh Look</p><div class="price">₹799</div></div>
+    <div class="product-card"><img src="https://assets.ajio.com/medias/sys_master/root/20231206/LL8c/656f8809afa4cf41f5b6d0f3/-473Wx593H-466854687-blue-MODEL.jpg"><h3>Sleeveless Top</h3><p>Light Fabric</p><div class="price">₹599</div></div>
+    <div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/1/e/1e45fcaDoctor1185White_1.jpg?tr=w-500"><h3>Sandals</h3><p>Comfort Chic</p><div class="price">₹699</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: support@fashify.com</p>
+  <p>Phone: +91 98765 43210</p>
+</section>
+
+<!-- JAVASCRIPT -->
+<script>
+// 1️⃣ LOGIN
+function login(){
+  let email = document.getElementById("email").value;
+  let pass = document.getElementById("password").value;
+
+  if(email !== "" && pass !== ""){
+    document.getElementById("loginPage").style.display = "none";
+  } else {
+    alert("Please enter email and password");
+  }
+}
+
+// 2️⃣ NAVIGATION ACTIVE
+let sections = document.querySelectorAll("section, div[id]");
+let navLinks = document.querySelectorAll("header .nav a");
+
+window.onscroll = () => {
+  sections.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+
+    if(top >= offset && top < offset + height){
+      navLinks.forEach(links => {
+        links.classList.remove("active");
+        let activeLink = document.querySelector("header .nav a[href*="+ id +"]");
+        if(activeLink) activeLink.classList.add("active");
+      });
+    }
+  });
+};
+
+// 3️⃣ SCROLL TO TOP BUTTON
+let topBtn = document.createElement("button");
+topBtn.innerText = "↑";
+topBtn.style.cssText = `
+position:fixed;bottom:25px;right:25px;padding:12px 18px;
+font-size:20px;border:none;border-radius:50%;cursor:pointer;
+background:#ff136f;color:#fff;display:none;z-index:9999;
+box-shadow:0 4px 10px rgba(0,0,0,0.3)
+`;
+document.body.appendChild(topBtn);
+
+window.addEventListener('scroll', () => {
+  topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+topBtn.onclick = () => { window.scrollTo({top:0,behavior:"smooth"}); };
+
+// 4️⃣ PRODUCT IMAGE ZOOM
+document.querySelectorAll(".product-card img").forEach(img => {
+  img.addEventListener("mouseover", () => img.style.transform = "scale(1.1)");
+  img.addEventListener("mouseout", () => img.style.transform = "scale(1)");
+});
+
+// 5️⃣ SECTION FADE-IN
+const observer = new IntersectionObserver(entries =>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0px)";
+    }
+  });
+},{
+  threshold:0.3
+});
+
+document.querySelectorAll("section").forEach(sec=>{
+  sec.style.opacity = 0;
+  sec.style.transform = "translateY(60px)";
+  sec.style.transition = "0.7s";
+  observer.observe(sec);
+});
+
+</script>
+
+</body>
+</html>
